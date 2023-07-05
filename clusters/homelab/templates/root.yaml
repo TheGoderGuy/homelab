@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root
+  name: homelab
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -10,8 +10,8 @@ spec:
     namespace: default
   project: default
   source:
-    path: apps/
-    repoURL: https://github.com/thegoderguy/homelab.git
+    path: clusters/homelab
+    repoURL: git@github.com/thegoderguy/homelab.git
     targetRevision: HEAD
   syncPolicy:
     automated:
