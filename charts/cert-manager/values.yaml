@@ -1,0 +1,10 @@
+cert-manager: #defined by either the name or alias of your dependency in Chart.yaml
+  namespace: cert-manager
+  installCRDs: true
+  featureGates: ExperimentalGatewayAPISupport=false
+  prometheus:
+    enabled: true
+    servicemonitor:
+      enabled: true
+      labels:
+        release: prometheus
