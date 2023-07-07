@@ -3,8 +3,8 @@ cert-manager: #defined by either the name or alias of your dependency in Chart.y
   installCRDs: true
   featureGates: ExperimentalGatewayAPISupport=false
   prometheus:
-    enabled: true
+    enabled: false
     servicemonitor:
-      enabled: true
+      enabled: false
       labels:
         release: prometheus
