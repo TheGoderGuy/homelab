@@ -17,9 +17,9 @@ spec:
     helm:
       parameters:
       - name: kong.certificates.proxy.commonName
-        value: "coderguy.eu"
+        value: "thecoderguy.eu"
       - name: kong.certificates.proxy.dnsNames[0]
-        value: "*.coderguy.eu"
+        value: "*.thecoderguy.eu"
   syncPolicy:
     # automated:
       # selfHeal: true
