@@ -13,7 +13,7 @@ kong:
   certificates:
     enabled: true
     issuer: "kong-issuer"
-    clusterIssuer: "letsencrypt-staging"
+    clusterIssuer: "letsencrypt-prod"
     proxy:
       enabled: true
     admin:
