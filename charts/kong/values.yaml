@@ -1,0 +1,24 @@
+kong:
+  env:
+    nginx_http_client_body_buffer_size: "6k"
+  serviceMonitor:
+    enabled: false
+    labels:
+      release: "prometheus"
+  ingressController:
+    env:
+      FEATURE_GATES: "GatewayAlpha=true"
+  podAnnotations:
+    kuma.io/gateway: enabled
+  certificates:
+    enabled: true
+    issuer: "kong-issuer"
+    clusterIssuer: "letsencrypt-staging"
+    proxy:
+      enabled: true
+    admin:
+      enabled: false
+    portal:
+      enabled: false
+    cluster:
+      enabled: false
